@@ -14,6 +14,7 @@ PASSWORD = os.getenv('TEAMUP_PASSWORD')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('CHAT_ID')
 SUBCALENDAR = os.getenv('SUBCALENDAR')
+ID = os.getenv('ID')
 bot = telebot.TeleBot(token=TELEGRAM_TOKEN)
 
 # Datetime +1 day
@@ -29,7 +30,7 @@ headers = {
 def send_message(message):
     return bot.send_message(chat_id=CHAT_ID, text=message)
 
-response = requests.get(f'https://api.teamup.com/ksn3zcmd6jntfswvai/events?startDate={date_string}&endDate={date_string}&tz=Europe/Moscow', headers=headers)
+response = requests.get(f'https://api.teamup.com/{ID}/events?startDate={date_string}&endDate={date_string}&tz=Europe/Moscow', headers=headers)
 
 if response.status_code == 200:
     obj = json.loads(response.text)
