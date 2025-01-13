@@ -34,7 +34,6 @@ response = requests.get(f'https://api.teamup.com/{ID}/events?startDate={date_str
 
 if response.status_code == 200:
     obj = json.loads(response.text)
-    obj_str = json.dumps(obj, indent=4, sort_keys=True)
     if len(obj['events']) > 0:
         mess = 'Список встреч на завтра:\n'
         for i in obj['events']:
