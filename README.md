@@ -18,7 +18,8 @@ For everything else, see the documentation:
 - TEAMUP_PASSWORD: пароль к Вашему аккаунту на teamup.com,
 - TELEGRAM_TOKEN: токен, который Вы получили при создании телеграмм-бота,
 - CHAT_ID: id чата Вашего аккаунта, не забудьте перед запуском написать боту первыми, иначе он писать не сможет,
-- SUBCALENDAR: номер календаря на сайте teamup.com (secret calendar key), необходимо произвести логин в аккаунте и выбрать Settings -> Sharing of your calendar -> "Create link".
+- SUBCALENDAR: чтобы были видны только Ваши встречи, а не всей команды, необходимо получить номер своих встреч,
+- ID: номер календаря на сайте teamup.com (secret calendar key), необходимо произвести логин в аккаунте и выбрать Settings -> Sharing of your calendar -> "Create link".
 
 Запуск можно производить один раз в день посредством crontab. Например:
 0 18 * * *  /usr/local/bin/python3 /usr/home/test/main.py
