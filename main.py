@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 import requests
 import datetime
 import json
@@ -38,5 +39,5 @@ if response.status_code == 200:
         for i in obj['events']:
             if str(i['subcalendar_id']) == str(SUBCALENDAR):
                 dt = datetime.datetime.fromisoformat(i['start_dt'])
-                mess += f'{i['title']}: {dt.hour}:{dt.minute}\n'
+                mess += f'{i["title"]}: {dt.hour}:{dt.minute}\n'
         send_message(mess)
