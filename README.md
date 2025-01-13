@@ -4,7 +4,7 @@ Please note that you must first replace the test data in the .env file:
 - TEAMUP_PASSWORD: the password to your account on teamup.com,
 - TELEGRAM_TOKEN: the token that you received when creating the telegram bot,
 - CHAT_ID: the chat ID of your account, do not forget to write to the bot first before launching, otherwise it will not be able to write,
-- SUBCALENDAR: to see only your meetings, and not the whole team, you need to get the number of your meetings,
+- SUBCALENDAR: to see only your meetings and not the whole team, you need to get the number of your meetings (for example, you can find out empirically by looking at obj['events'], or to send events to all teams, you need to leave the value "1" in the .env file),
 - ID: calendar number on the teamup.com website (secret calendar key), you need to log in to your account and select Settings -> Sharing of your calendar -> "Create link".
 
 It can be run once a day via crontab.
@@ -19,7 +19,7 @@ For everything else, see the documentation:
 - TEAMUP_PASSWORD: пароль к Вашему аккаунту на teamup.com,
 - TELEGRAM_TOKEN: токен, который Вы получили при создании телеграмм-бота,
 - CHAT_ID: id чата Вашего аккаунта, не забудьте перед запуском написать боту первыми, иначе он писать не сможет,
-- SUBCALENDAR: чтобы были видны только Ваши встречи, а не всей команды, необходимо получить номер своих встреч (например, можно выяснить опытным путём, вставив перед 40-й строчкой main.py принт print(str(i['subcalendar_id'])) и увидев все варианты (либо просмотрев obj['events'], либо просто заменить в 40-й строчке условие равенства == на неравенство !=),
+- SUBCALENDAR: чтобы были видны только Ваши встречи, а не всей команды, необходимо получить номер своих встреч (например, можно выяснить опытным путём, просмотрев obj['events'], либо чтобы отправлять события всех команд, нужно оставить в файле .env значение "1"),
 - ID: номер календаря на сайте teamup.com (secret calendar key), необходимо произвести логин в аккаунте и выбрать Settings -> Sharing of your calendar -> "Create link".
 
 Запуск можно производить один раз в день посредством crontab. Например:
