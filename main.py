@@ -37,7 +37,7 @@ if response.status_code == 200:
     if len(obj['events']) > 0:
         mess = 'Список встреч на завтра:\n'
         for i in obj['events']:
-            if str(i['subcalendar_id']) == str(SUBCALENDAR):
+            if str(i['subcalendar_id']) == str(SUBCALENDAR) or str(SUBCALENDAR) == '1':
                 dt = datetime.datetime.fromisoformat(i['start_dt'])
                 mess += f'{i["title"]}: {dt.hour}:{dt.minute}\n'
         send_message(mess)
