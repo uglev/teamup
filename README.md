@@ -6,6 +6,8 @@ Please note that you must first replace the test data in the .env file:
 - CHAT_ID: the chat ID of your account, do not forget to write to the bot first before launching, otherwise it will not be able to write,
 - SUBCALENDAR: the calendar number on the website teamup.com (secret calendar key), you must log in to your account and select Settings -> Sharing of your calendar -> "Create link".
 
+It can be run once a day via crontab.
+
 For everything else, see the documentation:
 - https://www.postman.com/teamup-calendar/teamup-calendar-public-workspace/documentation/9dxuvwb/teamup-calendar-api-examples
 - https://apidocs.teamup.com/
@@ -17,6 +19,9 @@ For everything else, see the documentation:
 - TELEGRAM_TOKEN: токен, который Вы получили при создании телеграмм-бота,
 - CHAT_ID: id чата Вашего аккаунта, не забудьте перед запуском написать боту первыми, иначе он писать не сможет,
 - SUBCALENDAR: номер календаря на сайте teamup.com (secret calendar key), необходимо произвести логин в аккаунте и выбрать Settings -> Sharing of your calendar -> "Create link".
+
+Запуск можно производить один раз в день посредством crontab. Например:
+0 18 * * *  /usr/local/bin/python3 /usr/home/test/main.py
 
 Во всём остальном смотрите документацию:
 - https://www.postman.com/teamup-calendar/teamup-calendar-public-workspace/documentation/9dxuvwb/teamup-calendar-api-examples
