@@ -4,7 +4,8 @@ Please note that you must first replace the test data in the .env file:
 - TEAMUP_PASSWORD: the password to your account on teamup.com,
 - TELEGRAM_TOKEN: the token that you received when creating the telegram bot,
 - CHAT_ID: the chat ID of your account, do not forget to write to the bot first before launching, otherwise it will not be able to write,
-- SUBCALENDAR: the calendar number on the website teamup.com (secret calendar key), you must log in to your account and select Settings -> Sharing of your calendar -> "Create link".
+- SUBCALENDAR: to see only your meetings, and not the whole team, you need to get the number of your meetings,
+- ID: calendar number on the teamup.com website (secret calendar key), you need to log in to your account and select Settings -> Sharing of your calendar -> "Create link".
 
 It can be run once a day via crontab.
 
