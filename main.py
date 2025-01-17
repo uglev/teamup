@@ -39,5 +39,5 @@ if response.status_code == 200:
         for i in obj['events']:
             if str(i['subcalendar_id']) == str(SUBCALENDAR) or str(SUBCALENDAR) == '1':
                 dt = datetime.datetime.fromisoformat(i['start_dt'])
-                mess += f'{i["title"]}: {dt.hour}:{dt.minute}\n'
+                mess += f'{i["title"]}: {str(dt.hour).zfill(2)}:{str(dt.minute).zfill(2)}\n'
         send_message(mess)
